@@ -1,0 +1,49 @@
+﻿<Window x:Class="Курсовая_работа.Корзина"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Курсовая_работа"
+        mc:Ignorable="d"
+        Title="Корзина" Height="550" Width="800" Background="#e7d7ff">
+    <Grid>
+
+        <TextBlock Text="Корзина" FontFamily="Monotype Corsiva" FontSize="30" Margin="331,0,355,395"/>
+
+        <DataGrid Name="CartItems" 
+                  CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"
+                  AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Итого" Binding="{Binding Price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <Button Content="Назад" FontSize="25" FontFamily="Monotype Corsiva" Background="#d2c4fa" Click="nazad_Click"  Margin="25,406,625,32" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button Content="Выход" FontSize="25" FontFamily="Monotype Corsiva" Background="#d2c4fa" Click="Button_Click"  Margin="295,406,355,32" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button Content="Оформить покупку" FontSize="25" FontFamily="Monotype Corsiva" Background="#d2c4fa" Click="oformlenie_pokypki_Click"  Margin="565,406,20,32" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>

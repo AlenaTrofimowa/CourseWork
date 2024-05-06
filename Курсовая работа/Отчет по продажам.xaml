@@ -1,0 +1,62 @@
+﻿<Window x:Class="Курсовая_работа.Отчет_по_продажам"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Курсовая_работа"
+        mc:Ignorable="d"
+        Title="Отчет_по_продажам" Height="400" Width="500" Background="#e7d7ff">
+    <StackPanel>
+        <TextBlock Text="Отчет по продажам" FontSize="30" FontFamily="Monotype Corsiva" Width="243"/>
+        <StackPanel Width="100" Height="25">
+    </StackPanel>
+       
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Click="SaveExcelReport_Click" Height="99" FontFamily="Monotype Corsiva" Background="#d2c4fa" FontSize="15" Width="160" Content="Добавить отчет в Exsel&gt;">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <StackPanel Width="100" Height="97">
+            </StackPanel>
+            <Button Click="SaveWordReport_Click" FontSize="15" Background="#d2c4fa" FontFamily="Monotype Corsiva" Width="178" Content="Добавить отчет в Word&gt;">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Width="100" Height="150">
+        </StackPanel>
+
+        <StackPanel Height="46" Width="248"  >
+            
+            
+
+            <Button Content="Выход" FontSize="25" FontFamily="Monotype Corsiva" Background="#d2c4fa" Click="Button_Click" Width="192" Height="36">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+        <Button x:Name="nazad" Content="Назад" FontSize="25" FontFamily="Monotype Corsiva" Background="#d2c4fa" Click="nazad_Click"  Margin="294,355,294,29" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        
+        
+
+    </StackPanel>
+    
+
+</Window>

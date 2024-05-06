@@ -1,0 +1,43 @@
+﻿<Window x:Class="Курсовая_работа.Авторизация_админ"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Курсовая_работа"
+        mc:Ignorable="d"
+        Title="Авторизация_админ" Height="450" Width="800" Background="#e7d7ff">
+    <Grid >
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Авторизация администратора" FontSize="35" Margin="0 0 0 20" Foreground="DarkSlateBlue" FontFamily="Monotype Corsiva"/>
+
+            <StackPanel x:Name="RegisterPanel" Visibility="Collapsed">
+                <TextBlock Text="Зарегистрироваться" FontSize="20" FontWeight="Bold" Margin="0 0 0 10" Foreground="MediumSlateBlue" FontFamily="Book Antiqua"/>
+                <TextBox x:Name="UsersnameTextBox" Text="Имя пользователя" Margin="0 0 0 10" Foreground="MediumSlateBlue" FontFamily="Book Antiqua" FontSize="20"/>
+                <TextBox x:Name="PasswordTextBox" Text="Пароль" Margin="0 0 0 10" Foreground="MediumSlateBlue" FontFamily="Book Antiqua" FontSize="20"/>
+                <Button Content="Зарегистрироваться"  Foreground="MediumSlateBlue" FontFamily="Book Antiqua" FontSize="20"/>
+            </StackPanel>
+
+            <TextBlock Text="Авторизоваться" FontSize="20" FontWeight="Bold" Margin="0 0 0 10" Foreground="MediumSlateBlue" FontFamily="Monotype Corsiva"/>
+            <TextBox x:Name="LoginUsernameTextBox" Text="Почта" Margin="0 0 0 10" Foreground="MediumSlateBlue" FontFamily="Monotype Corsiva" Height="25" FontSize="20"/>
+            <PasswordBox Name="Password" Margin="0 0 0 10" Foreground="MediumSlateBlue" FontFamily="Monotype Corsiva" Height="25" FontSize="20"/>
+            <Button Content="Войти" Click="LoginButton_Click" Background="#d2c4fa" Foreground="MediumSlateBlue" FontFamily="Monotype Corsiva" Height="36" FontSize="20">
+
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="30"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </StackPanel>
+        <Image Source="фото/логотип.jpg" Margin="597,304,-80,0" />
+        <Button x:Name="Nazad" Margin="21,367,561,10" Content="Назад" Background="#d2c4fa" Foreground="MediumSlateBlue" FontFamily="Monotype Corsiva" Height="36" FontSize="20" Click="Nazad_Click" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30" />
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>

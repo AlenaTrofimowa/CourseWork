@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4f2f6ccc382445a6915a71a6dc034fde" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="KyrsovaiaModel.ProductCategory" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KyrsovaiaModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KyrsovaiaModel.Role" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KyrsovaiaModel.ShoppingCart" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KyrsovaiaModel.sysdiagram" Width="1.5" PointX="15.125" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KyrsovaiaModel.User" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="KyrsovaiaModel.FK_Products_ProductCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="KyrsovaiaModel.FK_ShoppingCart_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="KyrsovaiaModel.FK_Users_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="KyrsovaiaModel.FK_ShoppingCart_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66C544D8-57DE-483D-9BCB-B8F17CDAB5B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Курсовая_работа</RootNamespace>
+    <AssemblyName>Курсовая работа</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="Katalog.xaml.cs">
+      <DependentUpon>Katalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kyrsovaya.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kyrsovaya.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kyrsovaya.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kyrsovaya.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kyrsovaya.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kyrsovaya.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Kyrsovaya.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCategory.cs">
+      <DependentUpon>Kyrsovaya.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>Kyrsovaya.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SessionHandler.cs" />
+    <Compile Include="ShoppingCart.cs">
+      <DependentUpon>Kyrsovaya.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Kyrsovaya.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Kyrsovaya.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Авторизация_админ.xaml.cs">
+      <DependentUpon>Авторизация_админ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Авторизация_пользователь.xaml.cs">
+      <DependentUpon>Авторизация_пользователь.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Букет.xaml.cs">
+      <DependentUpon>Букет.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Кольца.xaml.cs">
+      <DependentUpon>Кольца.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Корзина.xaml.cs">
+      <DependentUpon>Корзина.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Отчет по продажам.xaml.cs">
+      <DependentUpon>Отчет по продажам.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Платье.xaml.cs">
+      <DependentUpon>Платье.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Создание отчетов.xaml.cs">
+      <DependentUpon>Создание отчетов.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Тиара.xaml.cs">
+      <DependentUpon>Тиара.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Туфли.xaml.cs">
+      <DependentUpon>Туфли.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Фата.xaml.cs">
+      <DependentUpon>Фата.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Характеристика букета1.xaml.cs">
+      <DependentUpon>Характеристика букета1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Характеристика кольца1.xaml.cs">
+      <DependentUpon>Характеристика кольца1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Характеристика платье1.xaml.cs">
+      <DependentUpon>Характеристика платье1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Характеристика тиара1.xaml.cs">
+      <DependentUpon>Характеристика тиара1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Характеристика туфли1.xaml.cs">
+      <DependentUpon>Характеристика туфли1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Характеристика фата1.xaml.cs">
+      <DependentUpon>Характеристика фата1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Katalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Авторизация_админ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Авторизация_пользователь.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Букет.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Кольца.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Корзина.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Отчет по продажам.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Платье.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Создание отчетов.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Тиара.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Туфли.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Фата.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Характеристика букета1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Характеристика кольца1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Характеристика платье1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Характеристика тиара1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Характеристика туфли1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Характеристика фата1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Kyrsovaya.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Kyrsovaya.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Kyrsovaya.edmx.diagram">
+      <DependentUpon>Kyrsovaya.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фон.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\букет1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\логотип.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фон под букеты.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фон под платья.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фон под туфли.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фон под фату.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фон под тиару.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фон под кольца.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\туфли\туфли 1.jpg" />
+    <Resource Include="фото\туфли\туфли 2.jpg" />
+    <Resource Include="фото\туфли\туфли 4.jpg" />
+    <Resource Include="фото\туфли\туфли 5.jpg" />
+    <Resource Include="фото\туфли\туфли.jpg" />
+    <Resource Include="фото\туфли\туфли3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\платья\платье 3.jpg" />
+    <Resource Include="фото\платья\платье 4.jpg" />
+    <Resource Include="фото\платья\платье 6.jpg" />
+    <Resource Include="фото\платья\платье.jpg" />
+    <Resource Include="фото\платья\платье1.jpg" />
+    <Resource Include="фото\платья\полатье 5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\букет\букет1.jpg" />
+    <Resource Include="фото\букет\букет2.jpg" />
+    <Resource Include="фото\букет\букет3.jpg" />
+    <Resource Include="фото\букет\букет4.jpg" />
+    <Resource Include="фото\букет\букет5.jpg" />
+    <Resource Include="фото\букет\букет6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\тиара\тиара1.jpg" />
+    <Resource Include="фото\тиара\тиара2.jpg" />
+    <Resource Include="фото\тиара\тиара3.jpg" />
+    <Resource Include="фото\тиара\тиара4.jpg" />
+    <Resource Include="фото\тиара\тиара5.jpg" />
+    <Resource Include="фото\тиара\тиара6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фата\фата1.jpg" />
+    <Resource Include="фото\фата\фата2.jpg" />
+    <Resource Include="фото\фата\фата3.jpg" />
+    <Resource Include="фото\фата\фата4.jpg" />
+    <Resource Include="фото\фата\фата5.jpg" />
+    <Resource Include="фото\фата\фата6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\кольца\кольца1.jpg" />
+    <Resource Include="фото\кольца\кольца2.jpg" />
+    <Resource Include="фото\кольца\кольца3.jpg" />
+    <Resource Include="фото\кольца\кольца4.jpg" />
+    <Resource Include="фото\кольца\кольца5.jpg" />
+    <Resource Include="фото\кольца\кольца6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\кольца\кольца10.jpg" />
+    <Resource Include="фото\кольца\кольца7.jpg" />
+    <Resource Include="фото\кольца\кольца8.jpg" />
+    <Resource Include="фото\кольца\кольца9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\нет фото.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\букет\букет10.jpg" />
+    <Resource Include="фото\букет\букет7.jpg" />
+    <Resource Include="фото\букет\букет8.jpg" />
+    <Resource Include="фото\букет\букет9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\тиара\тиара10.jpg" />
+    <Resource Include="фото\тиара\тиара7.jpg" />
+    <Resource Include="фото\тиара\тиара8.jpg" />
+    <Resource Include="фото\тиара\тиара9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\платья\платье10.jpg" />
+    <Resource Include="фото\платья\платье7.jpg" />
+    <Resource Include="фото\платья\платье8.jpg" />
+    <Resource Include="фото\платья\платье9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\фата\фата10.jpg" />
+    <Resource Include="фото\фата\фата7.jpg" />
+    <Resource Include="фото\фата\фата8.jpg" />
+    <Resource Include="фото\фата\фата9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\туфли\туфли10.jpg" />
+    <Resource Include="фото\туфли\туфли7.jpg" />
+    <Resource Include="фото\туфли\туфли8.jpg" />
+    <Resource Include="фото\туфли\туфли9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="фото\платья\платье11.jpg" />
+    <Resource Include="фото\платья\платье12.jpg" />
+    <Resource Include="фото\платья\платье13.jpg" />
+    <Resource Include="фото\платья\платье14.jpg" />
+    <Resource Include="фото\платья\платье15.jpg" />
+    <Resource Include="фото\платья\платье16.jpg" />
+    <Resource Include="фото\платья\платье17.jpg" />
+    <Resource Include="фото\платья\платье18.jpg" />
+    <Resource Include="фото\платья\платье19.jpg" />
+    <Resource Include="фото\платья\платье20.jpg" />
+    <Resource Include="фото\кольца\кольца11.jpg" />
+    <Resource Include="фото\кольца\кольца12.jpg" />
+    <Resource Include="фото\кольца\кольца13.jpg" />
+    <Resource Include="фото\кольца\кольца14.jpg" />
+    <Resource Include="фото\кольца\кольца15.jpg" />
+    <Resource Include="фото\кольца\кольца16.jpg" />
+    <Resource Include="фото\кольца\кольца17.jpg" />
+    <Resource Include="фото\кольца\кольца18.jpg" />
+    <Resource Include="фото\кольца\кольца19.jpg" />
+    <Resource Include="фото\кольца\кольца20.jpg" />
+    <Resource Include="фото\тиара\тиара11.jpg" />
+    <Resource Include="фото\тиара\тиара12.jpg" />
+    <Resource Include="фото\тиара\тиара13.jpg" />
+    <Resource Include="фото\тиара\тиара14.jpg" />
+    <Resource Include="фото\тиара\тиара15.jpg" />
+    <Resource Include="фото\тиара\тиара16.jpg" />
+    <Resource Include="фото\тиара\тиара17.jpg" />
+    <Resource Include="фото\тиара\тиара18.jpg" />
+    <Resource Include="фото\тиара\тиара19.jpg" />
+    <Resource Include="фото\тиара\тиара20.jpg" />
+    <Resource Include="фото\туфли\туфли11.jpg" />
+    <Resource Include="фото\туфли\туфли12.jpg" />
+    <Resource Include="фото\туфли\туфли13.jpg" />
+    <Resource Include="фото\туфли\туфли14.jpg" />
+    <Resource Include="фото\туфли\туфли15.jpg" />
+    <Resource Include="фото\туфли\туфли16.jpg" />
+    <Resource Include="фото\туфли\туфли17.jpg" />
+    <Resource Include="фото\туфли\туфли18.jpg" />
+    <Resource Include="фото\туфли\туфли19.jpg" />
+    <Resource Include="фото\туфли\туфли20.jpg" />
+    <Resource Include="фото\фата\фата11.jpg" />
+    <Resource Include="фото\фата\фата12.jpg" />
+    <Resource Include="фото\фата\фата13.jpg" />
+    <Resource Include="фото\фата\фата14.jpg" />
+    <Resource Include="фото\фата\фата15.jpg" />
+    <Resource Include="фото\фата\фата16.jpg" />
+    <Resource Include="фото\фата\фата17.jpg" />
+    <Resource Include="фото\фата\фата18.jpg" />
+    <Resource Include="фото\фата\фата19.jpg" />
+    <Resource Include="фото\фата\фата20.jpg" />
+    <Resource Include="фото\букет\букет11.jpg" />
+    <Resource Include="фото\букет\букет12.jpg" />
+    <Resource Include="фото\букет\букет13.jpg" />
+    <Resource Include="фото\букет\букет14.jpg" />
+    <Resource Include="фото\букет\букет15.jpg" />
+    <Resource Include="фото\букет\букет16.jpg" />
+    <Resource Include="фото\букет\букет17.jpg" />
+    <Resource Include="фото\букет\букет18.jpg" />
+    <Resource Include="фото\букет\букет19.jpg" />
+    <Resource Include="фото\букет\букет20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Kyrsovaya.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Kyrsovaya.edmx</DependentUpon>
+      <LastGenOutput>Kyrsovaya.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Kyrsovaya.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Kyrsovaya.edmx</DependentUpon>
+      <LastGenOutput>Kyrsovaya.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
